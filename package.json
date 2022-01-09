@@ -1,0 +1,28 @@
+{
+  "name": "hasutebin_web_app",
+  "version": "1.0.0",
+  "description": "This is a pastebin clone in node js,express js, mongodb.",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gajendra0180/Hasutebin_Web_App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gajendra0180/Hasutebin_Web_App/issues"
+  },
+  "homepage": "https://github.com/gajendra0180/Hasutebin_Web_App#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
