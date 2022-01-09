@@ -14,7 +14,7 @@ dotenv.config({ path: "./config.env" });
 
 const DB = process.env.DATABASE;
 
-console.log("dATA",DB)
+// console.log("dATA",DB)
 
 mongoose
   .connect(DB)
@@ -22,7 +22,6 @@ mongoose
     console.log("Connection Successful");
   })
   .catch((err) => {
-    console.log("This s an exaksadks");
     console.log(err);
   });
 

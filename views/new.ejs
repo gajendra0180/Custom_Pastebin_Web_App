@@ -19,9 +19,7 @@
       <div class="wrapper">
         <div class="line_numbers">&gt;</div>
         <%- include("_buttons.ejs",{canSave:true}) %>
-        <textarea autofocus name="value">
-                <%= locals.value %>
-            </textarea
+        <textarea autofocus name="value"><%= locals.value %> </textarea
         >
       </div>
     </form>
