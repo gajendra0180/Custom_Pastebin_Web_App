@@ -1,15 +1,30 @@
 const express = require("express");
 const app = express();
 app.set("view engine", "ejs");
+const dotenv = require("dotenv");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
 const Document = require("./models/document");
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/wastebin", {
-  // uesUnifiedTopology: true,
-  // useNewUrlParseer: true,
-});
+// mongoose.connect("mongodb://localhost/wastebin", {
+// });
+
+dotenv.config({ path: "./config.env" });
+
+const DB = process.env.DATABASE;
+
+console.log("dATA",DB)
+
+mongoose
+  .connect(DB)
+  .then(() => {
+    console.log("Connection Successful");
+  })
+  .catch((err) => {
+    console.log("This s an exaksadks");
+    console.log(err);
+  });
 
 app.get("/", (req, res) => {
   const code = `Welcome to HasuteBin!
